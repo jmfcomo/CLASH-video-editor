@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35825.156 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CLASH", "CLASH.csproj", "{A8CC74A3-F47C-424B-83FA-915A2695391B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A8CC74A3-F47C-424B-83FA-915A2695391B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8CC74A3-F47C-424B-83FA-915A2695391B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8CC74A3-F47C-424B-83FA-915A2695391B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8CC74A3-F47C-424B-83FA-915A2695391B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {962991EF-1418-444E-B871-70C289C1DB0E}
+	EndGlobalSection
+EndGlobal
