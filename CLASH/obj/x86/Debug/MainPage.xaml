@@ -1,0 +1,31 @@
+﻿<Page
+    x:Class="CLASH.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CLASH"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:mux="using:Microsoft.UI.Xaml.Controls"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" Background="LightGray" Padding="8" HorizontalAlignment="Center" VerticalAlignment="Center">
+           <Button x:ConnectionId='3' Content="Clip View"
+                   Margin="0,0,8,0"
+                                               
+                   Width="200"/>
+           <Button x:ConnectionId='4' Content="Sequence View"
+                                                   
+                   Width="220"/>
+        </StackPanel>
+
+        <Frame x:ConnectionId='2' x:Name="ContentFrame" Grid.Row="1"/>
+    </Grid>
+</Page>
+
