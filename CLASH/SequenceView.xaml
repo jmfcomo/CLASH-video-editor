@@ -1,18 +1,83 @@
-﻿<Page
-    x:Class="CLASH.SequenceView"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:CLASH"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+﻿<Page  
+   x:Class="CLASH.SequenceView"  
+   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"  
+   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"  
+   xmlns:local="using:CLASH"  
+   xmlns:d="http://schemas.microsoft.com/expression/blend/2008"  
+   xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"  
+   mc:Ignorable="d"  
+   Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <TextBlock Text="This is the Sequence View"
-                   FontSize="24"
-                   Foreground="White"
-                   HorizontalAlignment="Center"
-                   VerticalAlignment="Center"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!--File selection view-->
+        <ListView Grid.Column="0" ScrollViewer.VerticalScrollBarVisibility="Auto">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Border Background="LightGray" Height="100" Width="600">
+                            <TextBlock Text="{Binding}"   
+                              FontSize="48" Foreground="Black"/>
+                        </Border>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            <ListView.Items>
+                <x:String>File</x:String>
+                <x:String>File</x:String>
+                <x:String>File</x:String>
+                <x:String>File</x:String>
+                <x:String>File</x:String>
+                <x:String>File</x:String>
+                <x:String>File</x:String>
+                <x:String>File</x:String>
+                <x:String>File</x:String>
+                <x:String>File</x:String>
+                <x:String>File</x:String>
+                <x:String>File</x:String>
+            </ListView.Items>
+        </ListView>
+        
+        <!--Preview Section-->
+        <Grid Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="4*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+
+            <!-- Preview video window -->
+            <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" Text="Preview Window here" FontSize="48" Foreground="White"/>
+
+            <!-- Time Scrub Bar -->
+            <TextBlock Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" Text="Time Scrub Bar" FontSize="48" Foreground="White"/>
+
+            <!-- Play/Pause Button -->
+            <Button Grid.Row="2" Grid.Column="0" FontSize="48">Play</Button>
+
+            <!-- Timestamp -->
+            <TextBlock Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" FontSize="48">0:00 / 10:47</TextBlock>
+
+            <!-- File Path -->
+            <TextBlock Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4" FontSize="48">/Render/FilePath/Video.mp4</TextBlock>
+            
+            <!-- Render Button -->
+            <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="4" FontSize="48">Render Sequence</Button>
+
+        </Grid>
+
     </Grid>
 </Page>

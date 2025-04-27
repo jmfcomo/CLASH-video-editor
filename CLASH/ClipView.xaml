@@ -9,10 +9,107 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <TextBlock Text="This is the Clip View"
-                   FontSize="24"
-                   Foreground="White"
-                   HorizontalAlignment="Center"
-                   VerticalAlignment="Center"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="7*"/>
+        </Grid.ColumnDefinitions>
+
+        <!--File selection view-->
+        <ListView Grid.Column="0" ScrollViewer.VerticalScrollBarVisibility="Auto">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Border Background="LightGray" Height="100" Width="600">
+                            <TextBlock Text="{Binding}"   
+                              FontSize="48" Foreground="Black"/>
+                        </Border>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            <ListView.Items>
+                <x:String>File</x:String>
+                <x:String>File</x:String>
+                <x:String>File</x:String>
+                <x:String>File</x:String>
+                <x:String>File</x:String>
+                <x:String>File</x:String>
+                <x:String>File</x:String>
+                <x:String>File</x:String>
+                <x:String>File</x:String>
+                <x:String>File</x:String>
+                <x:String>File</x:String>
+                <x:String>File</x:String>
+            </ListView.Items>
+        </ListView>
+        
+        <!--Sequence List-->
+        <ListView Grid.Column="1" ScrollViewer.VerticalScrollBarVisibility="Auto">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Border Background="LightGray" Height="100" Width="150">
+                            <TextBlock Text="{Binding}"   
+                              FontSize="48" Foreground="Black"/>
+                        </Border>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            <ListView.Items>
+                <x:String>File</x:String>
+                <x:String>File</x:String>
+                <x:String>File</x:String>
+                <x:String>File</x:String>
+                <x:String>File</x:String>
+                <x:String>File</x:String>
+                <x:String>File</x:String>
+                <x:String>File</x:String>
+                <x:String>File</x:String>
+                <x:String>File</x:String>
+                <x:String>File</x:String>
+                <x:String>File</x:String>
+            </ListView.Items>
+        </ListView>
+        
+        <!--Preview Section-->
+        <Grid Grid.Column="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="4*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+
+            <!-- Preview video window -->
+            <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" Text="Preview Window here" FontSize="48" Foreground="White"/>
+            
+            <!-- Time Scrub Bar -->
+            <TextBlock Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" Text="Time Scrub Bar" FontSize="48" Foreground="White"/>
+
+            <!-- Play/Pause Button -->
+            <Button Grid.Row="2" Grid.Column="0" FontSize="48">Play</Button>
+            
+            <!-- Timestamp -->
+            <TextBlock Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" FontSize="48">0:00 / 10:47</TextBlock>
+            
+            <!-- Add Clip Button -->
+            <Button Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4" FontSize="48">Add Clip To Sequence</Button>
+            
+            <!-- More buttons, not really sure what these do... -->
+            <Button Grid.Row="4" Grid.Column="0" FontSize="48">In</Button>
+            <Button Grid.Row="4" Grid.Column="1" FontSize="48">0:05</Button>
+            <Button Grid.Row="4" Grid.Column="2" FontSize="48">0:25</Button>
+            <Button Grid.Row="4" Grid.Column="3" FontSize="48">Out</Button>
+
+        </Grid>
+
     </Grid>
 </Page>
